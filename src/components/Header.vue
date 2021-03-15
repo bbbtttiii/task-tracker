@@ -1,7 +1,11 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button text="Add Task" color="green" />
+    <Button
+      @btn-click="$emit('toggle-add-task')"
+      :text="showAddTask ? 'Close' : 'Add Task'"
+      :color="showAddTask ? 'red' : 'green'"
+    />
   </header>
 </template>
 
@@ -12,6 +16,7 @@
     name: 'Header',
     props: {
       title: String,
+      showAddTask: Boolean
     },
     components: {
       Button,
@@ -19,7 +24,6 @@
   }
 </script>
 
-// scoped to this component only
 <style scoped>
   header {
     display: flex;
