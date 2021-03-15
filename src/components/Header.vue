@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Button from './Button'
+  import Button from './Button'
 
   export default {
     name: 'Header',
@@ -19,6 +19,7 @@ import Button from './Button'
   }
 </script>
 
+// scoped to this component only
 <style scoped>
   header {
     display: flex;

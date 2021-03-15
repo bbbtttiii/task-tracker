@@ -1,6 +1,6 @@
 <template>
   <button
-    @click="onClick()"
+    @click="onClick()" 
     :style="{background: color}"
     class="btn">
       {{text}}
